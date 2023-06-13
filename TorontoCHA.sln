@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorontoCHA.UI", "TorontoCHA\TorontoCHA.UI.csproj", "{FA9A07F2-F843-41A0-B3E3-D2F11662346E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorontoCHA.Repository", "RepositoryTorontoCHA\TorontoCHA.Repository.csproj", "{7A279957-BE46-4FBC-BAEC-CBD29221C9B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorontoCHA.BusinessDomain", "TorontoCHA.BusinessDomain\TorontoCHA.BusinessDomain.csproj", "{E1E8D0B2-B93E-463C-B466-9BE66870C8AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorontoCHA.API", "TorontoCHA.API\TorontoCHA.API.csproj", "{92A10D85-3FCB-44E3-A9DC-6B52DE334D97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorontoCHA.Entity", "TorontoCHA.Entity\TorontoCHA.Entity.csproj", "{2E53B783-CA1C-478B-A157-D764C5175C88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA9A07F2-F843-41A0-B3E3-D2F11662346E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9A07F2-F843-41A0-B3E3-D2F11662346E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9A07F2-F843-41A0-B3E3-D2F11662346E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9A07F2-F843-41A0-B3E3-D2F11662346E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A279957-BE46-4FBC-BAEC-CBD29221C9B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A279957-BE46-4FBC-BAEC-CBD29221C9B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A279957-BE46-4FBC-BAEC-CBD29221C9B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A279957-BE46-4FBC-BAEC-CBD29221C9B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E8D0B2-B93E-463C-B466-9BE66870C8AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E8D0B2-B93E-463C-B466-9BE66870C8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E8D0B2-B93E-463C-B466-9BE66870C8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E8D0B2-B93E-463C-B466-9BE66870C8AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A10D85-3FCB-44E3-A9DC-6B52DE334D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A10D85-3FCB-44E3-A9DC-6B52DE334D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A10D85-3FCB-44E3-A9DC-6B52DE334D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A10D85-3FCB-44E3-A9DC-6B52DE334D97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E53B783-CA1C-478B-A157-D764C5175C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E53B783-CA1C-478B-A157-D764C5175C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E53B783-CA1C-478B-A157-D764C5175C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E53B783-CA1C-478B-A157-D764C5175C88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE1742A5-03A2-4B5F-9519-7043B15645A2}
+	EndGlobalSection
+EndGlobal

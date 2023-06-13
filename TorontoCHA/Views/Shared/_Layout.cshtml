@@ -1,0 +1,112 @@
+﻿@using Microsoft.AspNetCore.Identity
+@*@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TorontoCHA</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TorontoCHA.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+@*    <div>User Name: @User.Identity?.Name</div>*@
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TorontoCHA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-toggle="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                            <div class="dropdown-menu" aria-lebelledby="navbardropdown">
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Team">Our Team</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="HowToJoin">How To Join</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-toggle="button" aria-haspopup="true" aria-expanded="false">Fundraisers</a>
+                            <div class="dropdown-menu" aria-lebelledby="navbardropdown">
+                                <a class="dropdown-item" asp-area="" asp-controller="Fundraisers" asp-action="CurrentFundraiser">Current Fundraiser</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Fundraisers" asp-action="PastFundraisers">Past Fundraisers</a>
+                            </div>
+                        </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Donate">Donate</a>
+                        </li>
+                        
+                    </ul>
+
+                    <ul class="navbar-nav d-flex">
+                        @if (@User.Identity.IsAuthenticated)
+                        {
+                               @* <li>
+                                    <div style="margin-right:20px">Hello, @User.Identity?.Name</div>
+                                </li>*@
+
+                                <li>
+                                    <div class="btn-group">
+                                        <button id="profile-button" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="bi bi-person-circle"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-end" aria-lebelledby="navbardropdown">
+                                            <button class="dropdown-item" type="button"><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="AccountDashboard">Account</a></button>
+                                            <button class="dropdown-item" type="button"><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="About">Settings</a></button>
+                                            <button class="dropdown-item" type="button"><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="LogoutTchaAccount">Sign out</a></button>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                           
+                          
+                        }
+                        else
+                        {
+                            <ul class="navbar-nav navbar-right">
+                                <li class="nav-item"> 
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="LoginTchaAccount">Log in</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="CreateTchaAccount">Sign up</a>
+                                </li>
+                        
+                            </ul>
+                        }
+                    </ul>
+                                        
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="border-top footer text-muted">
+        <div class="container">
+            TorontoCHA@gmail.com
+        </div>
+    </footer>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

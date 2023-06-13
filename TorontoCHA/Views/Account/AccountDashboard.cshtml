@@ -1,0 +1,44 @@
+﻿@model TorontoCHA.Entity.TchaAccount
+
+@{
+    ViewData["Title"] = "Account Dashboard";
+}
+
+
+<html>
+    <head>
+    <link rel="stylesheet" href="~/css/AccountDashboardStyle.css" />
+    <link rel="stylesheet" href="~/css/HomeStyle.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+
+        <div class="body-background">
+        <h1 class="display-4">Welcome, @Model.FirstName</h1>
+
+
+
+        </div>
+
+    <div class="body-background">
+        <h2>Account Information</h2>
+        <div class="name"> 
+            <p>@Model.FirstName</p>
+            <p>@Model.LastName</p>
+        </div>
+        <div class="info">
+            <p>@Model.Username</p>
+            <p>@Model.FirstName @Model.LastName</p>
+            <p>Email Address: @Model.Email</p>
+            <p>Phone Number: @Model.PhoneNumber</p>
+        </div>
+
+
+    </div>
+
+
+    </body>
+
+
+
+</html>

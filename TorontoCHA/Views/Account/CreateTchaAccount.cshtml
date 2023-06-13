@@ -1,0 +1,62 @@
+﻿@model TorontoCHA.Entity.TchaAccount
+
+@{
+    ViewData["Title"] = "Make a TchaAccount";
+}
+
+<html>
+    <head>
+    <link rel="stylesheet" href="~/css/LoginCreateStyle.css" />
+	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('html, body').animate({
+                    scrollTop: $('#about').offset().top
+                }, 500);
+            });
+        </script>
+    </head>
+
+
+     <body>
+        <div class="form2">
+            <h1>Create an Account</h1>
+
+            
+            @using (Html.BeginForm("CreateTchaAccount", "Account", FormMethod.Post))
+            {
+                <table>
+                    <tr><label for="FirstName">First Name</label></tr>
+                    <tr>@Html.TextBoxFor(m =>m.FirstName, new { @class = "form-control", @placeholder = "Enter your first name" })</tr>
+                    
+                    <tr><label for="LastName">Last Name</label></tr>
+                    <tr>@Html.TextBoxFor(m =>m.LastName, new { @class = "form-control", @placeholder = "Enter your last name" })</tr>
+
+                    <tr><label for="username">Username</label></tr>
+                    <tr>@Html.TextBoxFor(m =>m.Username, new { @class = "form-control", @placeholder = "Enter a username" })</tr>
+                    
+                    <tr><label for="password">Password</label></tr>
+                    <tr>@Html.PasswordFor(m =>m.Password, new { @class = "form-control", @placeholder = "Enter a password" })</tr>
+                    
+                    <tr><label for="Email">Email</label></tr>
+                    <tr>@Html.TextBoxFor(m =>m.Email, new { @class = "form-control", @placeholder = "Enter your email" })</tr>
+                                     
+                    <tr><label for="PhoneNumber">Phone Number</label></tr>
+                    <tr>@Html.TextBoxFor(m =>m.PhoneNumber, new { @class = "form-control", @placeholder = "Enter your phone number" })</tr>
+                   
+                    <tr colspan="2"><input class ="submit-button" type="submit" value="Sign up" /></tr>
+                    
+                </table>
+              } 
+             <div>
+                @if (ViewData["UserEmailFlag"] != null)
+                {
+                    <div style="color:red">@ViewData["UserEmailFlag"]</div>
+                }
+            </div>
+   
+        </div>   
+       
+        
+    </body>
+ </html>

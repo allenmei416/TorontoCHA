@@ -1,0 +1,46 @@
+﻿@model TorontoCHA.Entity.TchaAccount
+
+@{
+    ViewData["Title"] = "LoginTchaAccount";
+}
+
+<html>
+    <head>
+    <link rel="stylesheet" href="~/css/LoginCreateStyle.css" />
+	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('html, body').animate({
+                    scrollTop: $('#about').offset().top
+                }, 500);
+            });
+        </script>
+    </head>
+    <body>
+        <div class="form">
+            <h1>Login</h1>
+            @using (Html.BeginForm("LoginTchaAccount", "Account", FormMethod.Post))
+            {
+                <label for="username">Username</label>
+                <input class="form-control" name="username" type="text" placeholder="Enter your username" value="@ViewBag.username" required>
+
+                <label for="password">Password</label>
+                <input class="form-control" name="password" type="password" placeholder="Enter your password" value="@ViewBag.password" required>
+
+                <input type="submit" value="Login" />
+            
+          
+                <p>New Here? <a asp-controller="Account" asp-action="CreateTchaAccount">Make an account</a></p>
+
+               
+                @if(ViewData["LoginFlag"]!=null)
+                {
+                    <div style="color:red">@ViewData["LoginFlag"]</div>
+                }
+            }
+        </div>   
+       
+        
+    </body>
+
+</html>
